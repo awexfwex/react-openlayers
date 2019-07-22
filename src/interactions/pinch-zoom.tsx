@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olPinchZoom from 'ol/interaction/pinchzoom';
+import olPinchZoom from 'ol/interaction/PinchZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olDragPan from 'ol/interaction/dragpan';
+import olDragPan from 'ol/interaction/DragPan';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

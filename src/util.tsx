@@ -1,13 +1,14 @@
 import * as React from 'react';
 
-import olStyle from 'ol/style/style';
+import olStyle from 'ol/style/Style';
+import olEvent from 'ol/events/Event';
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-export type ReactOpenlayersEvent<T extends ol.events.Event = ol.events.Event> = ((event: T | ol.events.Event) => void) | void;
+export type ReactOpenlayersEvent<T extends olEvent = olEvent> = ((event: T | olEvent) => void) | void;
 
 export interface ReactOpenlayersEvents {
-  [key: string]: ((event: ol.events.Event | void) => void ) | void
+  [key: string]: ((event: olEvent | void) => void ) | void
 } 
 
 /**

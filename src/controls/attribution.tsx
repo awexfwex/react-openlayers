@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olAttribution from 'ol/control/attribution';
+import olAttribution from 'ol/control/Attribution';
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';

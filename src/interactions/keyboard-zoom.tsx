@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olKeyboardZoom from 'ol/interaction/keyboardzoom';
+import olKeyboardZoom from 'ol/interaction/KeyboardZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

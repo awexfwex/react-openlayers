@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olDoubleClickZoom from 'ol/interaction/doubleclickzoom';
+import olDoubleClickZoom from 'ol/interaction/DoubleClickZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

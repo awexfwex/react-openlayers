@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olPinchRotate from 'ol/interaction/pinchrotate';
+import olPinchRotate from 'ol/interaction/PinchRotate';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

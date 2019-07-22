@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olPointer from 'ol/interaction/pointer';
+import olPointer from 'ol/interaction/Pointer';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

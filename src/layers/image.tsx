@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import olImage from 'ol/layer/image';
-import olProjection from 'ol/proj/projection'
+import olProjection from 'ol/proj/Projection'
 import olImageStaticSource from 'ol/source/imagestatic'
 
 import { LayerType } from '.';

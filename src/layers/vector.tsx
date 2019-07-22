@@ -2,8 +2,8 @@
 import * as React from 'react';
 
 // OpenLayers
-import olVector from 'ol/layer/vector';
-import olVectorSource from 'ol/source/vector';
+import olVector from 'ol/layer/Vector';
+import olVectorSource from 'ol/source/Vector';
 
 // react-openlayers
 import { LayerType } from '.';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olSnap from 'ol/interaction/snap';
+import olSnap from 'ol/interaction/Snap';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

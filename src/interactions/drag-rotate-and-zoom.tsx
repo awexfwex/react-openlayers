@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olDragRotateAndZoom from 'ol/interaction/dragrotateandzoom';
+import olDragRotateAndZoom from 'ol/interaction/DragRotateAndZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olVector from 'ol/layer/vector';
+import olVector from 'ol/layer/Vector';
 import olVectorTile from 'ol/layer/vectortile';
 
 import { LayerType } from '.';

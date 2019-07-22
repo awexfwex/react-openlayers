@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olFullScreen from 'ol/control/fullscreen';
+import olFullScreen from 'ol/control/Fullscreen';
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';

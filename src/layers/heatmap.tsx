@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import olHeatmap from 'ol/layer/heatmap';
-import olVectorSource from 'ol/source/vector';
+import olVectorSource from 'ol/source/Vector';
 
 import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';

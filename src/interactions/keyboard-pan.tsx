@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olKeyboardPan from 'ol/interaction/keyboardpan';
+import olKeyboardPan from 'ol/interaction/KeyboardPan';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

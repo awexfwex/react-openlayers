@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olDraw from 'ol/interaction/draw';
+import olDraw from 'ol/interaction/Draw';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

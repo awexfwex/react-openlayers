@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 import olControls from 'ol/control';
-import olControl from 'ol/control/control';
+import olControl from 'ol/control/Control';
 import olInteractions from 'ol/interaction';
-import olInteraction from 'ol/interaction/interaction';
-import olLayer from 'ol/layer/layer';
+import olInteraction from 'ol/interaction/Interaction';
+import olLayer from 'ol/layer/Layer';
 import olMap from 'ol/map';
-import olOverlay from 'ol/overlay';
-import olView from 'ol/view';
+import olOverlay from 'ol/Overlay';
+import olView from 'ol/View';
 
 import Util, { Omit, ReactOpenlayersEvent, ReactOpenlayersEvents } from './util';
 

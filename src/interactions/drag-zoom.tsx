@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Options as DragZoomOptions } from 'ol/interaction/DragZoom';
+import olDragZoom, { Options as DragZoomOptions } from 'ol/interaction/DragZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

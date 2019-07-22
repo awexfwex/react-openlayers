@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olMouseWheelZoom from 'ol/interaction/mousewheelzoom';
+import olMouseWheelZoom from 'ol/interaction/MouseWheelZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

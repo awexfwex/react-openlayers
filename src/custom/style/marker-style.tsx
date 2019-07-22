@@ -1,5 +1,5 @@
 import IconStyle from 'ol/style/icon';
-import Style from 'ol/style/style';
+import Style from 'ol/style/Style';
 
 export class MarkerStyle {
   public src: string = 'https://openlayers.org/en/v4.6.5/examples/data/icon.png';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olTranslate from 'ol/interaction/translate';
+import olTranslate from 'ol/interaction/Translate';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
