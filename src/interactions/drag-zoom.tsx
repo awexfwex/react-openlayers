@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olDragZoom from 'ol/interaction/dragzoom';
+import { Options as DragZoomOptions } from 'ol/interaction/DragZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type DragZoomOptions = ol.olx.interaction.DragZoomOptions;
 export interface DragZoomProps extends DragZoomOptions, InteractionType<olDragZoom> {
   onBoxdrag?: ReactOpenlayersEvent
   onBoxend?: ReactOpenlayersEvent

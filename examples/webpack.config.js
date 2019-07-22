@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 const config = {
   mode: process.env.NODE_ENV || "development",
-  entry: './src/examples/index.tsx',
+  entry: './examples/index.tsx',
   output: {
     path: `${__dirname}/build/`,
     publicPath: '/build/',

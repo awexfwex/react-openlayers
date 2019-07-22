@@ -19,9 +19,9 @@ import { Select } from './select';
 import { Snap } from './snap';
 import { Translate } from './translate';
 
-import ol from 'ol';
+import { Interaction } from 'ol/interaction';
 
-export interface InteractionType<T extends ol.interaction.Interaction> {
+export interface InteractionType<T extends Interaction> {
   active?:boolean
   interactionRef?(ref:T):void,
 }

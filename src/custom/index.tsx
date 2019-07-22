@@ -1,4 +1,3 @@
-import {GoogleStreetViewPanorama} from './google-street-view-panorama';
 import {Popup} from './popup';
 import {ClusterStyle} from './style/cluster-style';
 import {MarkerStyle} from './style/marker-style';
@@ -15,7 +14,6 @@ const custom = {
     // GeoCoderComponent: GeoCoderComponent
   },
   Popup: Popup,
-  GoogleStreetViewPanorama: GoogleStreetViewPanorama
 };
 
 export {custom};

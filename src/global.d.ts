@@ -1,6 +1,3 @@
-// import ol from 'ol';
-
-declare module 'ol-mapbox-style';
 declare module 'react-syntax-highlighter';
 declare module 'react-syntax-highlighter/dist/styles/prism';
 
