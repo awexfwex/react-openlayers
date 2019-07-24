@@ -22,8 +22,8 @@ import { Translate } from './translate';
 import { Interaction } from 'ol/interaction';
 
 export interface InteractionType<T extends Interaction> {
-  active?:boolean
-  interactionRef?(ref:T):void,
+  active?: boolean;
+  interactionRef?(ref: T): void;
 }
 
 const interaction = {

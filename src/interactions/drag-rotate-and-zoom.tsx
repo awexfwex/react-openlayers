@@ -7,15 +7,15 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface DragRotateAndZoomProps extends DragRotateAndZoomOptions, InteractionType<olDragRotateAndZoom> {
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface DragRotateAndZoomEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
 }
 export class DragRotateAndZoom extends React.Component<DragRotateAndZoomProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

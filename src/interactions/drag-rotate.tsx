@@ -7,16 +7,16 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface DragRotateProps extends DragRotateOptions, InteractionType<olDragRotate> {
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onpropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onpropertychange?: ReactOpenlayersEvent;
+}
 
 export interface DragRotateEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class DragRotate extends React.Component<DragRotateProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

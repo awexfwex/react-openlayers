@@ -7,19 +7,19 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface DrawProps extends DrawOptions, InteractionType<olDraw> {
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onDrawend?: ReactOpenlayersEvent
-  onDrawstart?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onDrawend?: ReactOpenlayersEvent;
+  onDrawstart?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
 }
 
 export interface DrawEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'drawend': ReactOpenlayersEvent
-  'drawstart': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'drawend': ReactOpenlayersEvent;
+  'drawstart': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
 }
 
 export class Draw extends React.Component<DrawProps> {

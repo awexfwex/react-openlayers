@@ -7,22 +7,22 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface DragZoomProps extends DragZoomOptions, InteractionType<olDragZoom> {
-  onBoxdrag?: ReactOpenlayersEvent
-  onBoxend?: ReactOpenlayersEvent
-  onBoxstart?: ReactOpenlayersEvent
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onBoxdrag?: ReactOpenlayersEvent;
+  onBoxend?: ReactOpenlayersEvent;
+  onBoxstart?: ReactOpenlayersEvent;
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface DragZoomEvents extends ReactOpenlayersEvents {
-  'boxdrag': ReactOpenlayersEvent
-  'boxend': ReactOpenlayersEvent
-  'boxstart': ReactOpenlayersEvent
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'boxdrag': ReactOpenlayersEvent;
+  'boxend': ReactOpenlayersEvent;
+  'boxstart': ReactOpenlayersEvent;
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class DragZoom extends React.Component<DragZoomProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

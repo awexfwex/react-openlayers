@@ -12,35 +12,35 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type VectorOptions = layer.VectorOptions;
 export interface VectorProps extends VectorOptions, LayerType<olVector> {
-  onChange?: ReactOpenlayersEvent
-  onChangeExtent?: ReactOpenlayersEvent
-  onChangeMinResolution?: ReactOpenlayersEvent
-  onChangeMaxResolution?: ReactOpenlayersEvent
-  onChangeOpacity?: ReactOpenlayersEvent
-  onChangePreload?: ReactOpenlayersEvent
-  onChangeSource?: ReactOpenlayersEvent
-  onChangeVisible?: ReactOpenlayersEvent
-  onChangeZIndex?: ReactOpenlayersEvent
-  onPostcompose?: ReactOpenlayersEvent
-  onPrecompose?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-  onRender?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeExtent?: ReactOpenlayersEvent;
+  onChangeMinResolution?: ReactOpenlayersEvent;
+  onChangeMaxResolution?: ReactOpenlayersEvent;
+  onChangeOpacity?: ReactOpenlayersEvent;
+  onChangePreload?: ReactOpenlayersEvent;
+  onChangeSource?: ReactOpenlayersEvent;
+  onChangeVisible?: ReactOpenlayersEvent;
+  onChangeZIndex?: ReactOpenlayersEvent;
+  onPostcompose?: ReactOpenlayersEvent;
+  onPrecompose?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+  onRender?: ReactOpenlayersEvent;
+}
 
 export interface VectorEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:extent': ReactOpenlayersEvent
-  'change:maxResolution': ReactOpenlayersEvent
-  'change:minResolution': ReactOpenlayersEvent
-  'change:opacity': ReactOpenlayersEvent
-  'change:preload': ReactOpenlayersEvent
-  'change:source': ReactOpenlayersEvent
-  'change:visible': ReactOpenlayersEvent
-  'change:zIndex': ReactOpenlayersEvent
-  'postcompose': ReactOpenlayersEvent
-  'precompose': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-  'render': ReactOpenlayersEvent
+  'change': ReactOpenlayersEvent;
+  'change:extent': ReactOpenlayersEvent;
+  'change:maxResolution': ReactOpenlayersEvent;
+  'change:minResolution': ReactOpenlayersEvent;
+  'change:opacity': ReactOpenlayersEvent;
+  'change:preload': ReactOpenlayersEvent;
+  'change:source': ReactOpenlayersEvent;
+  'change:visible': ReactOpenlayersEvent;
+  'change:zIndex': ReactOpenlayersEvent;
+  'postcompose': ReactOpenlayersEvent;
+  'precompose': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+  'render': ReactOpenlayersEvent;
 }
 
 export class Vector extends React.Component<VectorProps> {

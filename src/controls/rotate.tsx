@@ -8,14 +8,14 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type RotateOptions = control.RotateOptions;
 export interface RotateProps extends RotateOptions, ControlType<olRotate> {
-  onChange?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface RotateEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class Rotate extends React.Component<RotateProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

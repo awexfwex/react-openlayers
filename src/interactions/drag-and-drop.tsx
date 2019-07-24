@@ -7,17 +7,17 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface DragAndDropProps extends DragAndDropOptions, InteractionType<olDragAndDrop> {
-  onAddfeatures?: ReactOpenlayersEvent<ol.interaction.DragAndDrop.Event>
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
+  onAddfeatures?: ReactOpenlayersEvent<ol.interaction.DragAndDrop.Event>;
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
 }
 
 export interface DragAndDropEvents extends ReactOpenlayersEvents {
-  'addfeatures': ReactOpenlayersEvent<ol.interaction.DragAndDrop.Event>
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
+  'addfeatures': ReactOpenlayersEvent<ol.interaction.DragAndDrop.Event>;
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
 }
 
 export class DragAndDrop extends React.Component<DragAndDropProps> {

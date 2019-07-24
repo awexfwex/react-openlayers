@@ -7,18 +7,18 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface ExtentProps extends ExtentOptions, InteractionType<olExtent> {
-  onEvent?: ReactOpenlayersEvent
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onEvent?: ReactOpenlayersEvent;
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface ExtentEvents extends ReactOpenlayersEvents {
-  'Event': ReactOpenlayersEvent
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'Event': ReactOpenlayersEvent;
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class Extent extends React.Component<ExtentProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

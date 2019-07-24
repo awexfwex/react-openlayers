@@ -6,12 +6,12 @@ import { RotateProps } from './rotate';
 import { ZoomProps } from './zoom';
 
 export interface ControlsProps {
-  attribution?: boolean
-  attributionOptions?: AttributionProps
-  rotate?: boolean
-  rotateOptions?: RotateProps
-  zoom?: boolean
-  zoomOptions?: ZoomProps
+  attribution?: boolean;
+  attributionOptions?: AttributionProps;
+  rotate?: boolean;
+  rotateOptions?: RotateProps;
+  zoom?: boolean;
+  zoomOptions?: ZoomProps;
 }
 
 // I wish I can name it as 'layers', not 'Layers'

@@ -8,7 +8,7 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 export type ReactOpenlayersEvent<T extends olEvent = olEvent> = ((event: T | olEvent) => void) | void;
 
 export interface ReactOpenlayersEvents {
-  [key: string]: ((event: olEvent | void) => void ) | void
+  [key: string]: ((event: olEvent | void) => void ) | void;
 } 
 
 /**
@@ -18,19 +18,19 @@ export interface ReactOpenlayersEvents {
  * @param props Props to extract
  */
 export const getOptions = <O, P>(defaultOpts: O, props: P): O => {
-    const options: O = { ...defaultOpts };
-    Object.keys(props).forEach((key: string) => {
-      if (
-        key !== 'children'
+  const options: O = { ...defaultOpts };
+  Object.keys(props).forEach((key: string) => {
+    if (
+      key !== 'children'
         && props[key] !== undefined //exclude undefined ones
         && !key.match(/^on[A-Z]/)     //exclude events
-      ) {
-        options[key] = props[key];
-      }
-    });
+    ) {
+      options[key] = props[key];
+    }
+  });
 
-    return options;
-  }
+  return options;
+}
 
 /**
  * Converts eventName to camelCase
@@ -55,7 +55,7 @@ export const getPropsKey = (eventName: string): string => {
  */
 export const getEvents = <E extends ReactOpenlayersEvents, P>(events: E, props: P): Partial<P> => {
   const prop2EventMap: Partial<P> = {};
-  Object.keys(events).forEach((key:string) => {
+  Object.keys(events).forEach((key: string) => {
     prop2EventMap[getPropsKey(key)] = key;
   })
 

@@ -9,24 +9,24 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type OverlayOptions = Options;
 export interface OverlayProps extends OverlayOptions, OverlayType<olOverlay> {
-  onChange?: ReactOpenlayersEvent
-  onChangeelement?: ReactOpenlayersEvent
-  onChangemap?: ReactOpenlayersEvent
-  onChangeoffset?: ReactOpenlayersEvent
-  onChangeposition?: ReactOpenlayersEvent
-  onChangepositioning?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeelement?: ReactOpenlayersEvent;
+  onChangemap?: ReactOpenlayersEvent;
+  onChangeoffset?: ReactOpenlayersEvent;
+  onChangeposition?: ReactOpenlayersEvent;
+  onChangepositioning?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface OverlayEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:element': ReactOpenlayersEvent
-  'change:map': ReactOpenlayersEvent
-  'change:offset': ReactOpenlayersEvent
-  'change:position': ReactOpenlayersEvent
-  'change:positioning': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'change:element': ReactOpenlayersEvent;
+  'change:map': ReactOpenlayersEvent;
+  'change:offset': ReactOpenlayersEvent;
+  'change:position': ReactOpenlayersEvent;
+  'change:positioning': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class Overlay extends React.Component<OverlayProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

@@ -7,21 +7,21 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface TranslateProps extends TranslateOptions, InteractionType<olTranslate> {
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-  onTranslateend?: ReactOpenlayersEvent
-  onTranslatestart?: ReactOpenlayersEvent
-  onTranslating?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+  onTranslateend?: ReactOpenlayersEvent;
+  onTranslatestart?: ReactOpenlayersEvent;
+  onTranslating?: ReactOpenlayersEvent;
+}
 export interface TranslateEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-  'translateend': ReactOpenlayersEvent
-  'translatestart': ReactOpenlayersEvent
-  'translating': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+  'translateend': ReactOpenlayersEvent;
+  'translatestart': ReactOpenlayersEvent;
+  'translating': ReactOpenlayersEvent;
+}
 
 export class Translate extends React.Component<TranslateProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

@@ -8,14 +8,14 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type ZoomOptions = control.ZoomOptions;
 export interface ZoomProps extends ZoomOptions, ControlType<olZoom> {
-  onChange?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface ZoomPropsEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 
 export class Zoom extends React.Component<ZoomProps> {

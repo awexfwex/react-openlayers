@@ -8,14 +8,14 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type ZoomToExtentOptions = control.ZoomToExtentOptions;
 export interface ZoomToExtentProps extends ZoomToExtentOptions, ControlType<olZoomToExtent> {
-  onChange?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface ZoomToExtentEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class ZoomToExtent extends React.Component<ZoomToExtentProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

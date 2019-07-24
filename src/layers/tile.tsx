@@ -9,38 +9,38 @@ import Util, { Omit, ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util
 
 export type TileOptions = layer.TileOptions;
 export interface TileProps extends Omit<TileOptions, 'source'>, LayerType<olTile> {
-  source?: TileOptions['source']
-  onChange?:ReactOpenlayersEvent
-  onChangeExtent?:ReactOpenlayersEvent
-  onChangeMinResolution?:ReactOpenlayersEvent
-  onChangeMaxResolution?:ReactOpenlayersEvent
-  onChangeOpacity?:ReactOpenlayersEvent
-  onChangePreload?:ReactOpenlayersEvent
-  onChangeSource?:ReactOpenlayersEvent
-  onChangeUseInterimTilesOnError?:ReactOpenlayersEvent
-  onChangeVisible?:ReactOpenlayersEvent
-  onChangeZIndex?:ReactOpenlayersEvent
-  onPostcompose?:ReactOpenlayersEvent
-  onPrecompose?:ReactOpenlayersEvent
-  onPropertychange?:ReactOpenlayersEvent
-  onRender?:ReactOpenlayersEvent
+  source?: TileOptions['source'];
+  onChange?: ReactOpenlayersEvent;
+  onChangeExtent?: ReactOpenlayersEvent;
+  onChangeMinResolution?: ReactOpenlayersEvent;
+  onChangeMaxResolution?: ReactOpenlayersEvent;
+  onChangeOpacity?: ReactOpenlayersEvent;
+  onChangePreload?: ReactOpenlayersEvent;
+  onChangeSource?: ReactOpenlayersEvent;
+  onChangeUseInterimTilesOnError?: ReactOpenlayersEvent;
+  onChangeVisible?: ReactOpenlayersEvent;
+  onChangeZIndex?: ReactOpenlayersEvent;
+  onPostcompose?: ReactOpenlayersEvent;
+  onPrecompose?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+  onRender?: ReactOpenlayersEvent;
 }
 
 export interface TileEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:extent': ReactOpenlayersEvent
-  'change:maxResolution': ReactOpenlayersEvent
-  'change:minResolution': ReactOpenlayersEvent
-  'change:opacity': ReactOpenlayersEvent
-  'change:preload': ReactOpenlayersEvent
-  'change:source': ReactOpenlayersEvent
-  'change:useInterimTilesOnError': ReactOpenlayersEvent
-  'change:visible': ReactOpenlayersEvent
-  'change:zIndex': ReactOpenlayersEvent
-  'postcompose': ReactOpenlayersEvent
-  'precompose': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-  'render': ReactOpenlayersEvent
+  'change': ReactOpenlayersEvent;
+  'change:extent': ReactOpenlayersEvent;
+  'change:maxResolution': ReactOpenlayersEvent;
+  'change:minResolution': ReactOpenlayersEvent;
+  'change:opacity': ReactOpenlayersEvent;
+  'change:preload': ReactOpenlayersEvent;
+  'change:source': ReactOpenlayersEvent;
+  'change:useInterimTilesOnError': ReactOpenlayersEvent;
+  'change:visible': ReactOpenlayersEvent;
+  'change:zIndex': ReactOpenlayersEvent;
+  'postcompose': ReactOpenlayersEvent;
+  'precompose': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+  'render': ReactOpenlayersEvent;
 }
 
 export class Tile extends React.Component<TileProps> {

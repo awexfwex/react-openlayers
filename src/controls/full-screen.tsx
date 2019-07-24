@@ -8,14 +8,14 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type FullScreenOptions = control.FullScreenOptions;
 export interface FullScreenProps extends FullScreenOptions, ControlType<olFullScreen> {
-  onchange?: ReactOpenlayersEvent
-  onpropertychange?: ReactOpenlayersEvent
-};
+  onchange?: ReactOpenlayersEvent;
+  onpropertychange?: ReactOpenlayersEvent;
+}
 
 export interface FullScreenEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class FullScreen extends React.Component<FullScreenProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

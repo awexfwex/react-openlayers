@@ -8,16 +8,16 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type ScaleLineOptions = control.ScaleLineOptions;
 export interface ScaleLineProps extends control.ScaleLineOptions, ControlType<olScaleLine> {
-  onChange?: ReactOpenlayersEvent
-  onChangeUnits?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeUnits?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface ScaleLineEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:units': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'change:units': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class ScaleLine extends React.Component<ScaleLineProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

@@ -8,14 +8,14 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type ZoomSliderOptions = control.ZoomSliderOptions;
 export interface ZoomSliderProps extends ZoomSliderOptions, ControlType<olZoomSlider> {
-  onChange?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface ZoomSliderEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class ZoomSlider extends React.Component<ZoomSliderProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

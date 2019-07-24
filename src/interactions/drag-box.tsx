@@ -7,21 +7,21 @@ import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface DragBoxProps extends interaction.DragBoxOptions, InteractionType<olDragBox> {
-  onBoxdrag?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>
-  onBoxend?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>
-  onBoxstart?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onBoxdrag?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+  onBoxend?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+  onBoxstart?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface DragBoxEvents extends ReactOpenlayersEvents {
-  'boxdrag': ReactOpenlayersEvent<ol.interaction.DragBox.Event>
-  'boxend': ReactOpenlayersEvent<ol.interaction.DragBox.Event>
-  'boxstart': ReactOpenlayersEvent<ol.interaction.DragBox.Event>
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
+  'boxdrag': ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+  'boxend': ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+  'boxstart': ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
 }
 
 export class DragBox extends React.Component<DragBoxProps> {

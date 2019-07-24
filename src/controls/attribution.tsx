@@ -8,13 +8,13 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type AttributionOptions = control.AttributionOptions;
 export interface AttributionProps extends AttributionOptions, ControlType<olAttribution> {
-  onChange: ReactOpenlayersEvent
-  onPropertychange: ReactOpenlayersEvent
-};
+  onChange: ReactOpenlayersEvent;
+  onPropertychange: ReactOpenlayersEvent;
+}
 export interface AttributionEvents extends ReactOpenlayersEvents {
-  change?: ReactOpenlayersEvent
-  propertychange?: ReactOpenlayersEvent
-};
+  change?: ReactOpenlayersEvent;
+  propertychange?: ReactOpenlayersEvent;
+}
 
 export class Attribution extends React.Component<AttributionProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

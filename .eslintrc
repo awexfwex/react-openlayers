@@ -7,8 +7,9 @@
         ],
   "plugins": ["@typescript-eslint"],
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": "./tsconfig.json"
   },
   "rules": {
+    "@typescript-eslint/indent": ["warn", 2]
   }
 }

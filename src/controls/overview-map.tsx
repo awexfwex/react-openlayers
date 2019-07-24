@@ -8,14 +8,14 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type OverviewMapOptions = control.OverviewMapOptions;
 export interface OverviewMapProps extends OverviewMapOptions, ControlType<olOverviewMap> {
-  onChange?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface OverviewMapEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class OverviewMap extends React.Component<OverviewMapProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

@@ -6,7 +6,7 @@ import {Vector} from './vector';
 import {VectorTile} from './vector-tile';
 
 export interface LayerType<T extends ol.layer.Layer> {
-  layerRef?(layer:T):void
+  layerRef?(layer: T): void;
 }
 
 const layer = {

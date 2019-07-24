@@ -14,10 +14,10 @@ export class MarkerStyle {
   public selectStyleFunction = ()  => {
     return new Style({
       image: new IconStyle({
-          anchor: [0.5, 0.96],
-          color: '#4271AE',
-          src: 'https://openlayers.org/en/v4.6.5/examples/data/dot.png'
-        })
+        anchor: [0.5, 0.96],
+        color: '#4271AE',
+        src: 'https://openlayers.org/en/v4.6.5/examples/data/dot.png'
+      })
     })
   };
 }

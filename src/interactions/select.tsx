@@ -8,17 +8,17 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface SelectProps extends SelectOptions, InteractionType<olSelect> {
   instance?: olSelect;
-  onChange?: ReactOpenlayersEvent
-  onChangeActive?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-  onSelect?: ReactOpenlayersEvent<SelectEvent>
+  onChange?: ReactOpenlayersEvent;
+  onChangeActive?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+  onSelect?: ReactOpenlayersEvent<SelectEvent>;
 }
 
 export interface SelectEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:active': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-  'select': ReactOpenlayersEvent
+  'change': ReactOpenlayersEvent;
+  'change:active': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+  'select': ReactOpenlayersEvent;
 }
 
 export class Select extends React.Component<SelectProps> {

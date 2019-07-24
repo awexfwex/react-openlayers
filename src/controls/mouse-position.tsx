@@ -8,18 +8,18 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type MousePositionOptions = control.MousePositionOptions;
 export interface MousePositionProps extends MousePositionOptions, ControlType<olMousePosition> {
-  onChange?: ReactOpenlayersEvent
-  onChangeCoordinateFormat?: ReactOpenlayersEvent
-  onChangeProjection?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeCoordinateFormat?: ReactOpenlayersEvent;
+  onChangeProjection?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+}
 
 export interface MousePositionEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:coordinateFormat': ReactOpenlayersEvent
-  'change:projection': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'change:coordinateFormat': ReactOpenlayersEvent;
+  'change:projection': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+}
 
 export class MousePosition extends React.Component<MousePositionProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

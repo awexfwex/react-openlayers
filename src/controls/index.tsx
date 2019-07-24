@@ -10,7 +10,7 @@ import { ZoomSlider } from './zoom-slider';
 import { ZoomToExtent } from './zoom-to-extent';
 
 export interface ControlType<T extends ol.control.Control> {
-  controlRef?(control:T):void
+  controlRef?(control: T): void;
 }
 
 const control = {

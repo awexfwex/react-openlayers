@@ -9,41 +9,41 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export interface VectorTileOptions extends layer.VectorTileOptions {
   // Completing missing props fromm official types for v4.6.5
-  preload?: number
-  declutter?: boolean
+  preload?: number;
+  declutter?: boolean;
 }
 export interface VectorTileProps extends VectorTileOptions, LayerType<olVector> {
-  onChange?: ReactOpenlayersEvent
-  onChangeExtent?: ReactOpenlayersEvent
-  onChangeMaxResolution?: ReactOpenlayersEvent
-  onChangeMinResolution?: ReactOpenlayersEvent
-  onChangeOpacity?: ReactOpenlayersEvent
-  onChangePreload?: ReactOpenlayersEvent
-  onChangeSource?: ReactOpenlayersEvent
-  onChangeUseInterimTilesOnError?: ReactOpenlayersEvent
-  onChangeVisible?: ReactOpenlayersEvent
-  onChangeZIndex?: ReactOpenlayersEvent
-  onPostcompose?: ReactOpenlayersEvent
-  onPrecompose?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-  onRender?: ReactOpenlayersEvent
+  onChange?: ReactOpenlayersEvent;
+  onChangeExtent?: ReactOpenlayersEvent;
+  onChangeMaxResolution?: ReactOpenlayersEvent;
+  onChangeMinResolution?: ReactOpenlayersEvent;
+  onChangeOpacity?: ReactOpenlayersEvent;
+  onChangePreload?: ReactOpenlayersEvent;
+  onChangeSource?: ReactOpenlayersEvent;
+  onChangeUseInterimTilesOnError?: ReactOpenlayersEvent;
+  onChangeVisible?: ReactOpenlayersEvent;
+  onChangeZIndex?: ReactOpenlayersEvent;
+  onPostcompose?: ReactOpenlayersEvent;
+  onPrecompose?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+  onRender?: ReactOpenlayersEvent;
 }
 
 export interface VectorTileEvents  extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:extent': ReactOpenlayersEvent
-  'change:maxResolution': ReactOpenlayersEvent
-  'change:minResolution': ReactOpenlayersEvent
-  'change:opacity': ReactOpenlayersEvent
-  'change:preload': ReactOpenlayersEvent
-  'change:source': ReactOpenlayersEvent
-  'change:useInterimTilesOnError': ReactOpenlayersEvent
-  'change:visible': ReactOpenlayersEvent
-  'change:zIndex': ReactOpenlayersEvent
-  'postcompose': ReactOpenlayersEvent
-  'precompose': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-  'render': ReactOpenlayersEvent
+  'change': ReactOpenlayersEvent;
+  'change:extent': ReactOpenlayersEvent;
+  'change:maxResolution': ReactOpenlayersEvent;
+  'change:minResolution': ReactOpenlayersEvent;
+  'change:opacity': ReactOpenlayersEvent;
+  'change:preload': ReactOpenlayersEvent;
+  'change:source': ReactOpenlayersEvent;
+  'change:useInterimTilesOnError': ReactOpenlayersEvent;
+  'change:visible': ReactOpenlayersEvent;
+  'change:zIndex': ReactOpenlayersEvent;
+  'postcompose': ReactOpenlayersEvent;
+  'precompose': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+  'render': ReactOpenlayersEvent;
 }
 
 export class VectorTile extends React.Component<VectorTileProps> {
@@ -134,7 +134,7 @@ export class VectorTile extends React.Component<VectorTileProps> {
     // Then update events
     const oldEvents = Util.getEvents(this.events, this.props);
     const newEvents = Util.getEvents(this.events, nextProps);
-    Object.keys(this.events).forEach((eventName:string) => {
+    Object.keys(this.events).forEach((eventName: string) => {
       if (oldEvents[eventName]) this.layer.un(eventName, oldEvents[eventName]);
       if (newEvents[eventName]) this.layer.on(eventName, newEvents[eventName]);
     })

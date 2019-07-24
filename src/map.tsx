@@ -23,46 +23,46 @@ export const MapContext = React.createContext<MapContextType>(undefined);
 export type MapOptions = MapOptions;
 
 export interface MapProps extends Omit<MapOptions, 'view'> {
-  view?: ViewOptions | olView
-  className?: string
-  style?: React.CSSProperties
-  target?: Element | string
-  onChange?: ReactOpenlayersEvent
-  onChangeLayerGroup?: ReactOpenlayersEvent
-  onChangeSize?: ReactOpenlayersEvent
-  onChangeTarget?: ReactOpenlayersEvent
-  onChangeView?: ReactOpenlayersEvent
-  onClick?: ReactOpenlayersEvent<ol.MapBrowserEvent>
-  onDblclick?: ReactOpenlayersEvent<ol.MapBrowserEvent>
-  onMovestart?: ReactOpenlayersEvent<ol.MapEvent>
-  onMoveend?: ReactOpenlayersEvent<ol.MapEvent>
-  onPointerdrag?: ReactOpenlayersEvent<ol.MapBrowserEvent>
-  onPointermove?: ReactOpenlayersEvent<ol.MapBrowserEvent>
-  onPostcompose?: ReactOpenlayersEvent<ol.render.Event>
-  onPostrender?: ReactOpenlayersEvent<ol.MapEvent>
-  onPrecompose?: ReactOpenlayersEvent<ol.render.Event>
-  onPropertychange?: ReactOpenlayersEvent
-  onSingleclick?: ReactOpenlayersEvent<ol.MapBrowserEvent>
-  mapRef?(map: olMap): void
+  view?: ViewOptions | olView;
+  className?: string;
+  style?: React.CSSProperties;
+  target?: Element | string;
+  onChange?: ReactOpenlayersEvent;
+  onChangeLayerGroup?: ReactOpenlayersEvent;
+  onChangeSize?: ReactOpenlayersEvent;
+  onChangeTarget?: ReactOpenlayersEvent;
+  onChangeView?: ReactOpenlayersEvent;
+  onClick?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  onDblclick?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  onMovestart?: ReactOpenlayersEvent<ol.MapEvent>;
+  onMoveend?: ReactOpenlayersEvent<ol.MapEvent>;
+  onPointerdrag?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  onPointermove?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  onPostcompose?: ReactOpenlayersEvent<ol.render.Event>;
+  onPostrender?: ReactOpenlayersEvent<ol.MapEvent>;
+  onPrecompose?: ReactOpenlayersEvent<ol.render.Event>;
+  onPropertychange?: ReactOpenlayersEvent;
+  onSingleclick?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  mapRef?(map: olMap): void;
 }
 
 export interface MapEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:layerGroup': ReactOpenlayersEvent
-  'change:size': ReactOpenlayersEvent
-  'change:target': ReactOpenlayersEvent
-  'change:view': ReactOpenlayersEvent
-  'click': ReactOpenlayersEvent<ol.MapBrowserEvent>
-  'dblclick': ReactOpenlayersEvent<ol.MapBrowserEvent>
-  'movestart': ReactOpenlayersEvent<ol.MapEvent>
-  'moveend': ReactOpenlayersEvent<ol.MapEvent>
-  'pointerdrag': ReactOpenlayersEvent<ol.MapBrowserEvent>
-  'pointermove': ReactOpenlayersEvent<ol.MapBrowserEvent>
-  'postcompose': ReactOpenlayersEvent<ol.render.Event>
-  'postrender': ReactOpenlayersEvent<ol.MapEvent>
-  'precompose': ReactOpenlayersEvent<ol.render.Event>
-  'propertychange': ReactOpenlayersEvent
-  'singleclick': ReactOpenlayersEvent<ol.MapBrowserEvent>
+  'change': ReactOpenlayersEvent;
+  'change:layerGroup': ReactOpenlayersEvent;
+  'change:size': ReactOpenlayersEvent;
+  'change:target': ReactOpenlayersEvent;
+  'change:view': ReactOpenlayersEvent;
+  'click': ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  'dblclick': ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  'movestart': ReactOpenlayersEvent<ol.MapEvent>;
+  'moveend': ReactOpenlayersEvent<ol.MapEvent>;
+  'pointerdrag': ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  'pointermove': ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  'postcompose': ReactOpenlayersEvent<ol.render.Event>;
+  'postrender': ReactOpenlayersEvent<ol.MapEvent>;
+  'precompose': ReactOpenlayersEvent<ol.render.Event>;
+  'propertychange': ReactOpenlayersEvent;
+  'singleclick': ReactOpenlayersEvent<ol.MapBrowserEvent>;
 }
 
 /**

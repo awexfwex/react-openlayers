@@ -10,36 +10,36 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type ImageOptions = layer.ImageOptions;
 export interface ImageProps extends ImageOptions, LayerType<olImage> {
-  onChange?: ReactOpenlayersEvent
-  onChangeExtent?: ReactOpenlayersEvent
-  onChangeGradient?: ReactOpenlayersEvent
-  onChangeMaxResolution?: ReactOpenlayersEvent
-  onChangeMinResolution?: ReactOpenlayersEvent
-  onChangeOpacity?: ReactOpenlayersEvent
-  onChangeSource?: ReactOpenlayersEvent
-  onChangeVisible?: ReactOpenlayersEvent
-  onChangeZIndex?: ReactOpenlayersEvent
-  onPostcompose?: ReactOpenlayersEvent
-  onPrecompose?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-  onRender?: ReactOpenlayersEvent
-};
+  onChange?: ReactOpenlayersEvent;
+  onChangeExtent?: ReactOpenlayersEvent;
+  onChangeGradient?: ReactOpenlayersEvent;
+  onChangeMaxResolution?: ReactOpenlayersEvent;
+  onChangeMinResolution?: ReactOpenlayersEvent;
+  onChangeOpacity?: ReactOpenlayersEvent;
+  onChangeSource?: ReactOpenlayersEvent;
+  onChangeVisible?: ReactOpenlayersEvent;
+  onChangeZIndex?: ReactOpenlayersEvent;
+  onPostcompose?: ReactOpenlayersEvent;
+  onPrecompose?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+  onRender?: ReactOpenlayersEvent;
+}
 
 export interface ImageEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:extent': ReactOpenlayersEvent
-  'change:gradient': ReactOpenlayersEvent
-  'change:maxResolution': ReactOpenlayersEvent
-  'change:minResolution': ReactOpenlayersEvent
-  'change:opacity': ReactOpenlayersEvent
-  'change:source': ReactOpenlayersEvent
-  'change:visible': ReactOpenlayersEvent
-  'change:zIndex': ReactOpenlayersEvent
-  'postcompose': ReactOpenlayersEvent
-  'precompose': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-  'render': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'change:extent': ReactOpenlayersEvent;
+  'change:gradient': ReactOpenlayersEvent;
+  'change:maxResolution': ReactOpenlayersEvent;
+  'change:minResolution': ReactOpenlayersEvent;
+  'change:opacity': ReactOpenlayersEvent;
+  'change:source': ReactOpenlayersEvent;
+  'change:visible': ReactOpenlayersEvent;
+  'change:zIndex': ReactOpenlayersEvent;
+  'postcompose': ReactOpenlayersEvent;
+  'precompose': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+  'render': ReactOpenlayersEvent;
+}
 
 export class Image extends React.Component<ImageProps> {
   public static contextType: React.Context<MapContextType> = MapContext;

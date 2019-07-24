@@ -9,40 +9,40 @@ import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type HeatmapOptions = layer.HeatmapOptions
 export interface HeatmapProps extends HeatmapOptions, LayerType<olHeatmap> {
-  onChange?: ReactOpenlayersEvent
-  onChangeBlur?: ReactOpenlayersEvent
-  onChangeExtent?: ReactOpenlayersEvent
-  onChangeGradient?: ReactOpenlayersEvent
-  onChangeMaxResolution?: ReactOpenlayersEvent
-  onChangeMinResolution?: ReactOpenlayersEvent
-  onChangeOpacity?: ReactOpenlayersEvent
-  onChangeRadius?: ReactOpenlayersEvent
-  onChangeSource?: ReactOpenlayersEvent
-  onChangeVisible?: ReactOpenlayersEvent
-  onChangeZIndex?: ReactOpenlayersEvent
-  onPostcompose?: ReactOpenlayersEvent
-  onPrecompose?: ReactOpenlayersEvent
-  onPropertychange?: ReactOpenlayersEvent
-  onRender?: ReactOpenlayersEvent
+  onChange?: ReactOpenlayersEvent;
+  onChangeBlur?: ReactOpenlayersEvent;
+  onChangeExtent?: ReactOpenlayersEvent;
+  onChangeGradient?: ReactOpenlayersEvent;
+  onChangeMaxResolution?: ReactOpenlayersEvent;
+  onChangeMinResolution?: ReactOpenlayersEvent;
+  onChangeOpacity?: ReactOpenlayersEvent;
+  onChangeRadius?: ReactOpenlayersEvent;
+  onChangeSource?: ReactOpenlayersEvent;
+  onChangeVisible?: ReactOpenlayersEvent;
+  onChangeZIndex?: ReactOpenlayersEvent;
+  onPostcompose?: ReactOpenlayersEvent;
+  onPrecompose?: ReactOpenlayersEvent;
+  onPropertychange?: ReactOpenlayersEvent;
+  onRender?: ReactOpenlayersEvent;
 }
 
 export interface HeatmapEvents extends ReactOpenlayersEvents {
-  'change': ReactOpenlayersEvent
-  'change:blur': ReactOpenlayersEvent
-  'change:extent': ReactOpenlayersEvent
-  'change:gradient': ReactOpenlayersEvent
-  'change:maxResolution': ReactOpenlayersEvent
-  'change:minResolution': ReactOpenlayersEvent
-  'change:opacity': ReactOpenlayersEvent
-  'change:radius': ReactOpenlayersEvent
-  'change:source': ReactOpenlayersEvent
-  'change:visible': ReactOpenlayersEvent
-  'change:zIndex': ReactOpenlayersEvent
-  'postcompose': ReactOpenlayersEvent
-  'precompose': ReactOpenlayersEvent
-  'propertychange': ReactOpenlayersEvent
-  'render': ReactOpenlayersEvent
-};
+  'change': ReactOpenlayersEvent;
+  'change:blur': ReactOpenlayersEvent;
+  'change:extent': ReactOpenlayersEvent;
+  'change:gradient': ReactOpenlayersEvent;
+  'change:maxResolution': ReactOpenlayersEvent;
+  'change:minResolution': ReactOpenlayersEvent;
+  'change:opacity': ReactOpenlayersEvent;
+  'change:radius': ReactOpenlayersEvent;
+  'change:source': ReactOpenlayersEvent;
+  'change:visible': ReactOpenlayersEvent;
+  'change:zIndex': ReactOpenlayersEvent;
+  'postcompose': ReactOpenlayersEvent;
+  'precompose': ReactOpenlayersEvent;
+  'propertychange': ReactOpenlayersEvent;
+  'render': ReactOpenlayersEvent;
+}
 
 export class Heatmap extends React.Component<HeatmapProps> {
   public static contextType: React.Context<MapContextType> = MapContext;
