@@ -6,8 +6,8 @@ import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ScaleLineOptions = ol.olx.control.ScaleLineOptions;
-export interface ScaleLineProps extends ol.olx.control.ScaleLineOptions, ControlType<olScaleLine> {
+export type ScaleLineOptions = control.ScaleLineOptions;
+export interface ScaleLineProps extends control.ScaleLineOptions, ControlType<olScaleLine> {
   onChange?: ReactOpenlayersEvent
   onChangeUnits?: ReactOpenlayersEvent
   onPropertychange?: ReactOpenlayersEvent

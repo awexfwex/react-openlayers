@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olKeyboardZoom from 'ol/interaction/KeyboardZoom';
+import olKeyboardZoom, { Options as KeyboardZoomOptions } from 'ol/interaction/KeyboardZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type KeyboardZoomOptions = ol.olx.interaction.KeyboardZoomOptions;
 export interface KeyboardZoomProps extends KeyboardZoomOptions, InteractionType<olKeyboardZoom> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

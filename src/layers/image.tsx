@@ -8,7 +8,7 @@ import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ImageOptions = ol.olx.layer.ImageOptions;
+export type ImageOptions = layer.ImageOptions;
 export interface ImageProps extends ImageOptions, LayerType<olImage> {
   onChange?: ReactOpenlayersEvent
   onChangeExtent?: ReactOpenlayersEvent

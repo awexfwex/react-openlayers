@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-export type InteractionsProps = ol.olx.interaction.DefaultsOptions;
+import { InteractionOptions as InteractionsProps } from 'ol/interaction/Interaction';
+
+// export type InteractionsProps = interaction.DefaultsOptions;
 
 export class Interactions extends React.Component<InteractionsProps> {
   public render() {

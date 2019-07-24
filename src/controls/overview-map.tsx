@@ -6,7 +6,7 @@ import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type OverviewMapOptions = ol.olx.control.OverviewMapOptions;
+export type OverviewMapOptions = control.OverviewMapOptions;
 export interface OverviewMapProps extends OverviewMapOptions, ControlType<olOverviewMap> {
   onChange?: ReactOpenlayersEvent
   onPropertychange?: ReactOpenlayersEvent

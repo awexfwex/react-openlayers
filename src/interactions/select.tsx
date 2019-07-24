@@ -1,19 +1,17 @@
 import * as React from 'react';
 
-import olSelect from 'ol/interaction/Select';
+import olSelect, { Options as SelectOptions, SelectEvent, SelectEventType } from 'ol/interaction/Select';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
-
-export type SelectOptions = ol.olx.interaction.SelectOptions;
 
 export interface SelectProps extends SelectOptions, InteractionType<olSelect> {
   instance?: olSelect;
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent
   onPropertychange?: ReactOpenlayersEvent
-  onSelect?: ReactOpenlayersEvent<ol.interaction.Select.Event>
+  onSelect?: ReactOpenlayersEvent<SelectEvent>
 }
 
 export interface SelectEvents extends ReactOpenlayersEvents {

@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olTranslate from 'ol/interaction/Translate';
+import olTranslate, { Options as TranslateOptions } from 'ol/interaction/Translate';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type TranslateOptions = ol.olx.interaction.TranslateOptions;
 export interface TranslateProps extends TranslateOptions, InteractionType<olTranslate> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

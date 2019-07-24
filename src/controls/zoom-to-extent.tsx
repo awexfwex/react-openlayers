@@ -6,7 +6,7 @@ import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ZoomToExtentOptions = ol.olx.control.ZoomToExtentOptions;
+export type ZoomToExtentOptions = control.ZoomToExtentOptions;
 export interface ZoomToExtentProps extends ZoomToExtentOptions, ControlType<olZoomToExtent> {
   onChange?: ReactOpenlayersEvent
   onPropertychange?: ReactOpenlayersEvent

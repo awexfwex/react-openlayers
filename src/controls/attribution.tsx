@@ -6,7 +6,7 @@ import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type AttributionOptions = ol.olx.control.AttributionOptions;
+export type AttributionOptions = control.AttributionOptions;
 export interface AttributionProps extends AttributionOptions, ControlType<olAttribution> {
   onChange: ReactOpenlayersEvent
   onPropertychange: ReactOpenlayersEvent

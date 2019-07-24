@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olPointer from 'ol/interaction/Pointer';
+import olPointer, { Options as PointerOptions } from 'ol/interaction/Pointer';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type PointerOptions = ol.olx.interaction.PointerOptions;
 export interface PointerProps extends PointerOptions, InteractionType<olPointer> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olPinchZoom from 'ol/interaction/PinchZoom';
+import olPinchZoom, { Options as PinchZoomOptions } from 'ol/interaction/PinchZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type PinchZoomOptions = ol.olx.interaction.PinchZoomOptions;
 export interface PinchZoomProps extends PinchZoomOptions, InteractionType<olPinchZoom> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

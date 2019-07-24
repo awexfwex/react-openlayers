@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olKeyboardPan from 'ol/interaction/KeyboardPan';
+import olKeyboardPan, { Options as KeyboardPanOptions } from 'ol/interaction/KeyboardPan';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type KeyboardPanOptions = ol.olx.interaction.KeyboardPanOptions;
 export interface KeyboardPanProps extends KeyboardPanOptions, InteractionType<olKeyboardPan> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olDragRotateAndZoom from 'ol/interaction/DragRotateAndZoom';
+import olDragRotateAndZoom, { Options as DragRotateAndZoomOptions } from 'ol/interaction/DragRotateAndZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type DragRotateAndZoomOptions = ol.olx.interaction.DragRotateAndZoomOptions;
 export interface DragRotateAndZoomProps extends DragRotateAndZoomOptions, InteractionType<olDragRotateAndZoom> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

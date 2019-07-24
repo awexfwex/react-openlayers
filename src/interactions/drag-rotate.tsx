@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olDragRotate from 'ol/interaction/DragRotate';
+import olDragRotate, { Options as DragRotateOptions } from 'ol/interaction/DragRotate';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type DragRotateOptions = ol.olx.interaction.DragRotateOptions;
 export interface DragRotateProps extends DragRotateOptions, InteractionType<olDragRotate> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

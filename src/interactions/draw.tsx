@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olDraw from 'ol/interaction/Draw';
+import olDraw, { Options as DrawOptions } from 'ol/interaction/Draw';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type DrawOptions = ol.olx.interaction.DrawOptions;
 export interface DrawProps extends DrawOptions, InteractionType<olDraw> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

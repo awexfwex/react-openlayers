@@ -6,7 +6,7 @@ import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type RotateOptions = ol.olx.control.RotateOptions;
+export type RotateOptions = control.RotateOptions;
 export interface RotateProps extends RotateOptions, ControlType<olRotate> {
   onChange?: ReactOpenlayersEvent
   onPropertychange?: ReactOpenlayersEvent

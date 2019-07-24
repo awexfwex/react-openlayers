@@ -1,13 +1,12 @@
 import * as React from 'react';
 
-import olDragBox from 'ol/interaction/DragBox';
+import olDragBox, { Options as DragBoxOptions } from 'ol/interaction/DragBox';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type DragBoxOptions = ol.olx.interaction.DragBoxOptions;
-export interface DragBoxProps extends ol.olx.interaction.DragBoxOptions, InteractionType<olDragBox> {
+export interface DragBoxProps extends interaction.DragBoxOptions, InteractionType<olDragBox> {
   onBoxdrag?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>
   onBoxend?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>
   onBoxstart?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>

@@ -10,7 +10,7 @@ import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type VectorOptions = ol.olx.layer.VectorOptions;
+export type VectorOptions = layer.VectorOptions;
 export interface VectorProps extends VectorOptions, LayerType<olVector> {
   onChange?: ReactOpenlayersEvent
   onChangeExtent?: ReactOpenlayersEvent

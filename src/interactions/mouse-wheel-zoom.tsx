@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olMouseWheelZoom from 'ol/interaction/MouseWheelZoom';
+import olMouseWheelZoom, { Options as MouseWheelZoomOptions } from 'ol/interaction/MouseWheelZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type MouseWheelZoomOptions = ol.olx.interaction.MouseWheelZoomOptions;
 export interface MouseWheelZoomProps extends MouseWheelZoomOptions, InteractionType<olMouseWheelZoom> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

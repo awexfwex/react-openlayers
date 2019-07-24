@@ -6,7 +6,7 @@ import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ZoomSliderOptions = ol.olx.control.ZoomSliderOptions;
+export type ZoomSliderOptions = control.ZoomSliderOptions;
 export interface ZoomSliderProps extends ZoomSliderOptions, ControlType<olZoomSlider> {
   onChange?: ReactOpenlayersEvent
   onPropertychange?: ReactOpenlayersEvent

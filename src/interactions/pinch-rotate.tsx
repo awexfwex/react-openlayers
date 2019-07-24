@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olPinchRotate from 'ol/interaction/PinchRotate';
+import olPinchRotate, { Options as PinchRotateOptions } from 'ol/interaction/PinchRotate';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type PinchRotateOptions = ol.olx.interaction.PinchRotateOptions;
 export interface PinchRotateProps extends PinchRotateOptions, InteractionType<olPinchRotate> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

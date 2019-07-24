@@ -20,10 +20,10 @@ import './ol.css';
 export type MapContextType = Map | void;
 export const MapContext = React.createContext<MapContextType>(undefined);
 
-export type MapOptions = ol.olx.MapOptions;
+export type MapOptions = MapOptions;
 
 export interface MapProps extends Omit<MapOptions, 'view'> {
-  view?: ol.olx.ViewOptions | olView
+  view?: ViewOptions | olView
   className?: string
   style?: React.CSSProperties
   target?: Element | string

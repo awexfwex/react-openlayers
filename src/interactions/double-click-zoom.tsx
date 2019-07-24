@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olDoubleClickZoom from 'ol/interaction/DoubleClickZoom';
+import olDoubleClickZoom, { Options as DoubleClickZoomOptions } from 'ol/interaction/DoubleClickZoom';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type DoubleClickZoomOptions = ol.olx.interaction.DoubleClickZoomOptions;
 export interface DoubleClickZoomProps extends DoubleClickZoomOptions, InteractionType<olDoubleClickZoom> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

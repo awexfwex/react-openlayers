@@ -35,10 +35,6 @@
         "declaration": true,
         "outDir": "dist",
         "baseUrl": "src",
-        "typeRoots": [
-            "./node_modules/@types/",
-            "./src/@types/"
-        ],
         "strict": false,
         "paths": {
             "react-openlayers": [
@@ -46,21 +42,12 @@
             ]
         }
     },
-    "files": [
-        "src/index.tsx",
-        "src/global.d.ts",
-        "node_modules/@types/ol/index.d.ts",
-    ],
     "include": [
-        "src/**/*", "examples"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules"
     ],
     "compileOnSave": false,
-    "buildOnSave": false,
-    "angularCompilerOptions": {
-        "strictMetadataEmit": true,
-        "skipTemplateCodegen": true
-    }
+    "buildOnSave": false
 }

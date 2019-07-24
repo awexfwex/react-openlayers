@@ -7,7 +7,7 @@ import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export interface VectorTileOptions extends ol.olx.layer.VectorTileOptions {
+export interface VectorTileOptions extends layer.VectorTileOptions {
   // Completing missing props fromm official types for v4.6.5
   preload?: number
   declutter?: boolean

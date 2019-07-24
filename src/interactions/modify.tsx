@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olModify from 'ol/interaction/Modify';
+import olModify, { Options as ModifyOptions } from 'ol/interaction/Modify';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ModifyOptions = ol.olx.interaction.ModifyOptions;
 export interface ModifyProps extends ModifyOptions, InteractionType<olModify> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

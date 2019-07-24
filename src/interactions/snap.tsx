@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olSnap from 'ol/interaction/Snap';
+import olSnap, { Options as SnapOptions } from 'ol/interaction/Snap';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type SnapOptions = ol.olx.interaction.SnapOptions;
 export interface SnapProps extends SnapOptions, InteractionType<olSnap> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent

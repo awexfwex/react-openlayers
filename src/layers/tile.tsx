@@ -7,7 +7,7 @@ import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { Omit, ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type TileOptions = ol.olx.layer.TileOptions;
+export type TileOptions = layer.TileOptions;
 export interface TileProps extends Omit<TileOptions, 'source'>, LayerType<olTile> {
   source?: TileOptions['source']
   onChange?:ReactOpenlayersEvent

@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import olDragPan from 'ol/interaction/DragPan';
+import olDragPan, { Options as DragPanOptions } from 'ol/interaction/DragPan';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type DragPanOptions = ol.olx.interaction.DragPanOptions;
 export interface DragPanProps extends DragPanOptions, InteractionType<olDragPan> {
   onChange?: ReactOpenlayersEvent
   onChangeActive?: ReactOpenlayersEvent
