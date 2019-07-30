@@ -11,6 +11,8 @@ export interface ReactOpenlayersEvents {
   [key: string]: ((event: olEvent | void) => void ) | void;
 } 
 
+export function emptyCallback() {}
+
 /**
  * Extract default options from props
  * 
@@ -40,7 +42,7 @@ export const getOptions = <O, P>(defaultOpts: O, props: P): O => {
  */
 export const getPropsKey = (eventName: string): string => {
   const processedEventName: string = eventName
-    .replace(/(\:[a-z])/g, ($1: string) => $1.toUpperCase())
+    .replace(/(:[a-z])/g, ($1: string) => $1.toUpperCase())
     .replace(/^[a-z]/, ($1: string) => $1.toUpperCase())
     .replace(':','');
 

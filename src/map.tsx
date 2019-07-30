@@ -5,16 +5,19 @@ import olControl from 'ol/control/Control';
 import olInteractions from 'ol/interaction';
 import olInteraction from 'ol/interaction/Interaction';
 import olLayer from 'ol/layer/Layer';
-import olMap from 'ol/map';
+import olMap from 'ol/Map';
+import MapBrowserEvent from 'ol/MapBrowserEvent';
+import MapEvent from 'ol/MapEvent';
+import RenderEvent from 'ol/render/Event';
 import olOverlay from 'ol/Overlay';
-import olView from 'ol/View';
+import olView, {ViewOptions} from 'ol/View';
+import { MapOptions } from 'ol/PluggableMap';
 
 import Util, { Omit, ReactOpenlayersEvent, ReactOpenlayersEvents } from './util';
 
 import { ControlsProps } from './controls/controls';
 import { InteractionsProps } from './interactions/interactions';
 
-import './map.css';
 import './ol.css';
 
 export type MapContextType = Map | void;
@@ -26,23 +29,23 @@ export interface MapProps extends Omit<MapOptions, 'view'> {
   view?: ViewOptions | olView;
   className?: string;
   style?: React.CSSProperties;
-  target?: Element | string;
+  target?: HTMLElement | string;
   onChange?: ReactOpenlayersEvent;
   onChangeLayerGroup?: ReactOpenlayersEvent;
   onChangeSize?: ReactOpenlayersEvent;
   onChangeTarget?: ReactOpenlayersEvent;
   onChangeView?: ReactOpenlayersEvent;
-  onClick?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  onDblclick?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  onMovestart?: ReactOpenlayersEvent<ol.MapEvent>;
-  onMoveend?: ReactOpenlayersEvent<ol.MapEvent>;
-  onPointerdrag?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  onPointermove?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  onPostcompose?: ReactOpenlayersEvent<ol.render.Event>;
-  onPostrender?: ReactOpenlayersEvent<ol.MapEvent>;
-  onPrecompose?: ReactOpenlayersEvent<ol.render.Event>;
+  onClick?: ReactOpenlayersEvent<MapBrowserEvent>;
+  onDblclick?: ReactOpenlayersEvent<MapBrowserEvent>;
+  onMovestart?: ReactOpenlayersEvent<MapEvent>;
+  onMoveend?: ReactOpenlayersEvent<MapEvent>;
+  onPointerdrag?: ReactOpenlayersEvent<MapBrowserEvent>;
+  onPointermove?: ReactOpenlayersEvent<MapBrowserEvent>;
+  onPostcompose?: ReactOpenlayersEvent<RenderEvent>;
+  onPostrender?: ReactOpenlayersEvent<MapEvent>;
+  onPrecompose?: ReactOpenlayersEvent<RenderEvent>;
   onPropertychange?: ReactOpenlayersEvent;
-  onSingleclick?: ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  onSingleclick?: ReactOpenlayersEvent<MapBrowserEvent>;
   mapRef?(map: olMap): void;
 }
 
@@ -52,26 +55,26 @@ export interface MapEvents extends ReactOpenlayersEvents {
   'change:size': ReactOpenlayersEvent;
   'change:target': ReactOpenlayersEvent;
   'change:view': ReactOpenlayersEvent;
-  'click': ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  'dblclick': ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  'movestart': ReactOpenlayersEvent<ol.MapEvent>;
-  'moveend': ReactOpenlayersEvent<ol.MapEvent>;
-  'pointerdrag': ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  'pointermove': ReactOpenlayersEvent<ol.MapBrowserEvent>;
-  'postcompose': ReactOpenlayersEvent<ol.render.Event>;
-  'postrender': ReactOpenlayersEvent<ol.MapEvent>;
-  'precompose': ReactOpenlayersEvent<ol.render.Event>;
+  'click': ReactOpenlayersEvent<MapBrowserEvent>;
+  'dblclick': ReactOpenlayersEvent<MapBrowserEvent>;
+  'movestart': ReactOpenlayersEvent<MapEvent>;
+  'moveend': ReactOpenlayersEvent<MapEvent>;
+  'pointerdrag': ReactOpenlayersEvent<MapBrowserEvent>;
+  'pointermove': ReactOpenlayersEvent<MapBrowserEvent>;
+  'postcompose': ReactOpenlayersEvent<RenderEvent>;
+  'postrender': ReactOpenlayersEvent<MapEvent>;
+  'precompose': ReactOpenlayersEvent<RenderEvent>;
   'propertychange': ReactOpenlayersEvent;
-  'singleclick': ReactOpenlayersEvent<ol.MapBrowserEvent>;
+  'singleclick': ReactOpenlayersEvent<MapBrowserEvent>;
 }
 
 /**
- * Implementation of ol.map https://openlayers.org/en/latest/apidoc/ol.Map.html
+ * Implementation of map https://openlayers.org/en/latest/apidoc/Map.html
  *
  * example:
  * <Map view={{center: [0, 0], zoom: 1}} mapRef={map => this.map = map}>
  *   <layers>
- *     <layer.Tile source={new ol.source.OSM()} />
+ *     <layer.Tile source={new source.OSM()} />
  *     <layer.Vector options={}/>
  *   </layers>
  *   <controls></controls>
@@ -94,8 +97,6 @@ export class Map extends React.Component<MapProps> {
     keyboardEventTarget: undefined,
     loadTilesWhileAnimating: undefined,
     loadTilesWhileInteracting: undefined,
-    logo: undefined,
-    renderer: undefined,
     view: new olView({ center: [0, 0], zoom: 3 }),
     controls: undefined,
     interactions: undefined,
@@ -122,7 +123,7 @@ export class Map extends React.Component<MapProps> {
     'singleclick': undefined
   };
 
-  constructor(props: MapProps) {
+  public constructor(props: MapProps) {
     super(props);
     this.mapDiv = React.createRef<HTMLDivElement>();
   }

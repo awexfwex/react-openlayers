@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import olFullScreen from 'ol/control/Fullscreen';
+import olFullScreen, { Options } from 'ol/control/FullScreen';
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type FullScreenOptions = control.FullScreenOptions;
+export type FullScreenOptions = Options;
 export interface FullScreenProps extends FullScreenOptions, ControlType<olFullScreen> {
   onchange?: ReactOpenlayersEvent;
   onpropertychange?: ReactOpenlayersEvent;

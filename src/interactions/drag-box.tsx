@@ -1,24 +1,25 @@
 import * as React from 'react';
 
-import olDragBox, { Options as DragBoxOptions } from 'ol/interaction/DragBox';
+import olDragBox, { Options, DragBoxEvent, DragBoxEventType, EndCondition } from 'ol/interaction/DragBox';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
-import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
+import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents, emptyCallback } from '../util';
 
-export interface DragBoxProps extends interaction.DragBoxOptions, InteractionType<olDragBox> {
-  onBoxdrag?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
-  onBoxend?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
-  onBoxstart?: ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+export type DragBoxOptions = Options;
+export interface DragBoxProps extends DragBoxOptions, InteractionType<olDragBox> {
+  onBoxdrag?: ReactOpenlayersEvent<DragBoxEvent>;
+  onBoxend?: ReactOpenlayersEvent<DragBoxEvent>;
+  onBoxstart?: ReactOpenlayersEvent<DragBoxEvent>;
   onChange?: ReactOpenlayersEvent;
   onChangeActive?: ReactOpenlayersEvent;
   onPropertychange?: ReactOpenlayersEvent;
 }
 
 export interface DragBoxEvents extends ReactOpenlayersEvents {
-  'boxdrag': ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
-  'boxend': ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
-  'boxstart': ReactOpenlayersEvent<ol.interaction.DragBox.Event>;
+  'boxdrag': ReactOpenlayersEvent<DragBoxEvent>;
+  'boxend': ReactOpenlayersEvent<DragBoxEvent>;
+  'boxstart': ReactOpenlayersEvent<DragBoxEvent>;
   'change': ReactOpenlayersEvent;
   'change:active': ReactOpenlayersEvent;
   'propertychange': ReactOpenlayersEvent;
@@ -32,7 +33,8 @@ export class DragBox extends React.Component<DragBoxProps> {
   public options: DragBoxOptions = {
     className: undefined,
     condition: undefined,
-    boxEndCondition: undefined
+    boxEndCondition: undefined,
+    onBoxEnd: emptyCallback
   };
 
   public events: DragBoxEvents = {

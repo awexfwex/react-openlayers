@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import olZoomSlider from 'ol/control/zoomslider'
+import olZoomSlider, {Options} from 'ol/control/ZoomSlider'
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ZoomSliderOptions = control.ZoomSliderOptions;
+export type ZoomSliderOptions = Options;
 export interface ZoomSliderProps extends ZoomSliderOptions, ControlType<olZoomSlider> {
   onChange?: ReactOpenlayersEvent;
   onPropertychange?: ReactOpenlayersEvent;

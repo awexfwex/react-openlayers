@@ -9,7 +9,9 @@ import { Zoom } from './zoom';
 import { ZoomSlider } from './zoom-slider';
 import { ZoomToExtent } from './zoom-to-extent';
 
-export interface ControlType<T extends ol.control.Control> {
+import Control from 'ol/control/Control';
+
+export interface ControlType<T extends Control> {
   controlRef?(control: T): void;
 }
 

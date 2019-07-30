@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import olAttribution from 'ol/control/Attribution';
+import olAttribution, { Options } from 'ol/control/Attribution';
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type AttributionOptions = control.AttributionOptions;
+export type AttributionOptions = Options;
 export interface AttributionProps extends AttributionOptions, ControlType<olAttribution> {
   onChange: ReactOpenlayersEvent;
   onPropertychange: ReactOpenlayersEvent;

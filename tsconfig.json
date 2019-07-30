@@ -30,7 +30,7 @@
         //"allowUnreachableCode": true,
         //"allowUnusedLabels": true,
         "noImplicitUseStrict": false,
-        "noFallthroughCasesInSwitch": false,
+        "noFallthroughCasesInSwitch": true,
         //"suppressExcessPropertyErrors": true,
         "declaration": true,
         "outDir": "dist",
@@ -43,7 +43,8 @@
         }
     },
     "include": [
-        "src/**/*"
+        "src/**/*.tsx",
+        "src/**/*.ts",
     ],
     "exclude": [
         "node_modules"

@@ -1,5 +1,4 @@
 import { control, Controls } from './controls/index';
-import { custom } from './custom/index';
 import { interaction, Interactions } from './interactions/index';
 import { layer, Layers } from './layers/index';
 import { Overlay, Overlays } from './overlays';
@@ -16,7 +15,6 @@ export {
 
   //name spaces
   layer,
-  custom,
   control,
   interaction,
 

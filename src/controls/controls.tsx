@@ -25,7 +25,7 @@ export class Controls extends React.Component<ControlsProps> {
     zoomOptions: undefined
   };
 
-  constructor(props: ControlsProps) {
+  public constructor(props: ControlsProps) {
     super(props);
     this.options = Util.getOptions<ControlsProps, ControlsProps>(this.options, this.props);
   }

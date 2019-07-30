@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import { InteractionOptions as InteractionsProps } from 'ol/interaction/Interaction';
+// import { InteractionOptions } from 'ol/interaction/Interaction';
 
-// export type InteractionsProps = interaction.DefaultsOptions;
+import { DefaultsOptions } from 'ol/interaction';
+
+export type InteractionsProps = DefaultsOptions;
 
 export class Interactions extends React.Component<InteractionsProps> {
   public render() {

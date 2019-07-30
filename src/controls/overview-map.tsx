@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import olOverviewMap from 'ol/control/overviewmap'
+import olOverviewMap, { Options } from 'ol/control/OverviewMap'
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type OverviewMapOptions = control.OverviewMapOptions;
+export type OverviewMapOptions = Options;
 export interface OverviewMapProps extends OverviewMapOptions, ControlType<olOverviewMap> {
   onChange?: ReactOpenlayersEvent;
   onPropertychange?: ReactOpenlayersEvent;

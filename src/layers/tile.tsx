@@ -105,8 +105,8 @@ export class Tile extends React.Component<TileProps> {
         case 'extent': this.layer.setExtent(newVal); break;
         case 'minResolution': this.layer.setMinResolution(newVal); break;
         case 'maxResolution': this.layer.setMaxResolution(newVal); break;
-        case 'useInterimTilesOnError': this.layer.setUseInterimTilesOnError(newVal);
-        default:
+        case 'useInterimTilesOnError': this.layer.setUseInterimTilesOnError(newVal); break;
+        default: break;
       }
     });
 

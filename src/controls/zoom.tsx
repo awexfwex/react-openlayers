@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import olZoom from 'ol/control/zoom'
+import olZoom, {Options} from 'ol/control/Zoom'
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ZoomOptions = control.ZoomOptions;
+export type ZoomOptions = Options;
 export interface ZoomProps extends ZoomOptions, ControlType<olZoom> {
   onChange?: ReactOpenlayersEvent;
   onPropertychange?: ReactOpenlayersEvent;

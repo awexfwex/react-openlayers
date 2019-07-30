@@ -113,8 +113,8 @@ export class Image extends React.Component<ImageProps> {
         case 'visible': this.layer.setVisible(newVal); break;
         case 'extent': this.layer.setExtent(newVal); break;
         case 'minResolution': this.layer.setMinResolution(newVal); break;
-        case 'maxResolution': this.layer.setMaxResolution(newVal);
-        default:
+        case 'maxResolution': this.layer.setMaxResolution(newVal); break;
+        default: break;
       }
     });
 

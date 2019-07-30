@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import olMousePosition from 'ol/control/mouseposition'
+import olMousePosition, {Options} from 'ol/control/MousePosition'
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type MousePositionOptions = control.MousePositionOptions;
+export type MousePositionOptions = Options;
 export interface MousePositionProps extends MousePositionOptions, ControlType<olMousePosition> {
   onChange?: ReactOpenlayersEvent;
   onChangeCoordinateFormat?: ReactOpenlayersEvent;
