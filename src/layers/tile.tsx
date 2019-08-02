@@ -1,13 +1,14 @@
 import * as React from 'react';
 
-import olTile from 'ol/layer/tile';
-import olOSMSource from 'ol/source/osm';
+import olTile, { Options } from 'ol/layer/tile';
+import olOSMSource from 'ol/source/OSM';
 
 import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { Omit, ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type TileOptions = layer.TileOptions;
+export type TileOptions = Options;
+
 export interface TileProps extends Omit<TileOptions, 'source'>, LayerType<olTile> {
   source?: TileOptions['source'];
   onChange?: ReactOpenlayersEvent;

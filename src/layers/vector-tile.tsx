@@ -1,17 +1,14 @@
 import * as React from 'react';
 
 import olVector from 'ol/layer/Vector';
-import olVectorTile from 'ol/layer/vectortile';
+import olVectorTile, { Options } from 'ol/layer/VectorTile';
 
 import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export interface VectorTileOptions extends layer.VectorTileOptions {
-  // Completing missing props fromm official types for v4.6.5
-  preload?: number;
-  declutter?: boolean;
-}
+export type VectorTileOptions = Options;
+
 export interface VectorTileProps extends VectorTileOptions, LayerType<olVector> {
   onChange?: ReactOpenlayersEvent;
   onChangeExtent?: ReactOpenlayersEvent;

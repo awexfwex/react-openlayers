@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olDragAndDrop, { Options, DragAndDropEvent, DragAndDropEventType } from 'ol/interaction/DragAndDrop';
+import olDragAndDrop, { Options, DragAndDropEvent } from 'ol/interaction/DragAndDrop';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

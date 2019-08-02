@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olZoomSlider, {Options} from 'ol/control/ZoomSlider'
+import olZoomSlider, { Options } from 'ol/control/ZoomSlider'
 
 import { ControlType } from '.';
 import { MapContext, MapContextType } from '../map';
@@ -25,8 +25,6 @@ export class ZoomSlider extends React.Component<ZoomSliderProps> {
   public options: ZoomSliderOptions = {
     duration: undefined,
     className: undefined,
-    maxResolution: undefined,
-    minResolution: undefined,
     render: undefined
   };
 

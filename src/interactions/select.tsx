@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olSelect, { Options as SelectOptions, SelectEvent, SelectEventType } from 'ol/interaction/Select';
+import olSelect, { Options as SelectOptions, SelectEvent } from 'ol/interaction/Select';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

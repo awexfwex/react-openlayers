@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import olDragBox, { Options, DragBoxEvent, DragBoxEventType, EndCondition } from 'ol/interaction/DragBox';
+import olDragBox, { Options, DragBoxEvent } from 'ol/interaction/DragBox';
 
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';

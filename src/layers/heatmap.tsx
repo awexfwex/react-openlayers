@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import olHeatmap from 'ol/layer/heatmap';
+import olHeatmap, { Options } from 'ol/layer/Heatmap';
 import olVectorSource from 'ol/source/Vector';
 
 import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type HeatmapOptions = layer.HeatmapOptions
+export type HeatmapOptions = Options
 export interface HeatmapProps extends HeatmapOptions, LayerType<olHeatmap> {
   onChange?: ReactOpenlayersEvent;
   onChangeBlur?: ReactOpenlayersEvent;

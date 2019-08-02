@@ -1,13 +1,13 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
-import olOverlay, { Options } from 'ol/Overlay'
+import olOverlay, { Options } from 'ol/Overlay';
 
 import { OverlayType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
 export type OverlayOptions = Options;
+
 export interface OverlayProps extends OverlayOptions, OverlayType<olOverlay> {
   onChange?: ReactOpenlayersEvent;
   onChangeelement?: ReactOpenlayersEvent;
@@ -32,7 +32,7 @@ export class Overlay extends React.Component<OverlayProps> {
   public static contextType: React.Context<MapContextType> = MapContext;
 
   public overlay: olOverlay;
-  public el: HTMLElement;
+  public el: HTMLElement | null;
 
   public options: OverlayOptions = {
     id: undefined,
@@ -58,7 +58,7 @@ export class Overlay extends React.Component<OverlayProps> {
 
   public render() {
     return (
-      <div>
+      <div ref={r => { this.el = r; }}>
         {this.props.children}
       </div>
     );
@@ -66,7 +66,6 @@ export class Overlay extends React.Component<OverlayProps> {
 
   public componentDidMount() {
     const options = Util.getOptions<OverlayOptions, OverlayProps>(this.options, this.props);
-    options.element = (ReactDOM.findDOMNode(this) as Element).querySelector('div') as HTMLDivElement;
     this.overlay = new olOverlay(options);
     this.context.overlays.push(this.overlay);
     if (this.props.overlayRef) this.props.overlayRef(this.overlay);

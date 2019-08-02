@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-import olImage from 'ol/layer/image';
+import olImage, { Options } from 'ol/layer/Image';
 import olProjection from 'ol/proj/Projection'
-import olImageStaticSource from 'ol/source/imagestatic'
+import olImageStaticSource from 'ol/source/ImageStatic'
 
 import { LayerType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
 
-export type ImageOptions = layer.ImageOptions;
+export type ImageOptions = Options;
 export interface ImageProps extends ImageOptions, LayerType<olImage> {
   onChange?: ReactOpenlayersEvent;
   onChangeExtent?: ReactOpenlayersEvent;

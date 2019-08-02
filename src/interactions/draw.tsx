@@ -5,6 +5,7 @@ import olDraw, { Options as DrawOptions } from 'ol/interaction/Draw';
 import { InteractionType } from '.';
 import { MapContext, MapContextType } from '../map';
 import Util, { ReactOpenlayersEvent, ReactOpenlayersEvents } from '../util';
+import GeometryType from 'ol/geom/GeometryType';
 
 export interface DrawProps extends DrawOptions, InteractionType<olDraw> {
   onChange?: ReactOpenlayersEvent;
@@ -32,7 +33,7 @@ export class Draw extends React.Component<DrawProps> {
     features: undefined,
     source: undefined,
     snapTolerance: undefined,
-    type: "Point",
+    type: GeometryType.POINT,
     maxPoints: undefined,
     minPoints: undefined,
     finishCondition: undefined,
