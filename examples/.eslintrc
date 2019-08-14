@@ -1,0 +1,13 @@
+{
+  "root": false,
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["react-openlayers", "../"]
+        ],
+        "extensions": [".ts", ".tsx"]
+      }
+    }
+  }
+}
