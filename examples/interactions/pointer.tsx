@@ -7,7 +7,7 @@ import { interaction, Interactions, layer, Layers, Map } from "react-openlayers"
 import Highlighter from "../Highlighter";
 
 interface PointerState {
-  action: string
+  action: string;
 }
 
 export class Pointer extends React.Component<{}, PointerState> {
@@ -50,7 +50,7 @@ export class Pointer extends React.Component<{}, PointerState> {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map view={{ center: [0, 0], zoom: 2 }}>
+          `<Map view={{ center: [0, 0], zoom: 2 }}>
   <Layers>
     <layer.Tile />
   </Layers>

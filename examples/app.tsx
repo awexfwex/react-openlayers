@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
 import { Route } from 'react-router-dom';
 import './app.css';
@@ -15,7 +16,6 @@ import {
 } from '@material-ui/core';
 
 import Controls from './controls';
-import Custom from './custom';
 import Interactions from './interactions';
 import Layers from './layers';
 import Overlays from './overlays';
@@ -46,7 +46,6 @@ class App extends React.Component<WithStyles> {
               <Button color="inherit" href="#/controls">Controls</Button>
               <Button color="inherit" href="#/overlays">Overlays</Button>
               <Button color="inherit" href="#/interactions">Interactions</Button>
-              <Button color="inherit" href="#/custom">Custom examples</Button>
             </div>
           </Toolbar>
         </AppBar>
@@ -55,10 +54,9 @@ class App extends React.Component<WithStyles> {
         <Route path="/controls" component={Controls}/>
         <Route path="/interactions" component={Interactions}/>
         <Route path="/overlays" component={Overlays}/>
-        <Route path="/custom" component={Custom} />
       </div>
     );
   }
 }
 
-export default withStyles(styles, { withTheme: true })(App)
+export default hot(withStyles(styles, { withTheme: true })(App));

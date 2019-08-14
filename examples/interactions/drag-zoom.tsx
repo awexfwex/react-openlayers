@@ -28,7 +28,7 @@ export class DragZoom extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map view={{ center: [0, 0], zoom: 2 }}>
+          `<Map view={{ center: [0, 0], zoom: 2 }}>
   <Layers>
     <layer.Tile />
   </Layers>

@@ -32,15 +32,15 @@ const vectorStyle = new Style({
 });
 
 interface SnapState {
-  drawType: ol.geom.GeometryType,
-  activeInteraction: 'draw' | 'modify'
+  drawType: ol.geom.GeometryType;
+  activeInteraction: 'draw' | 'modify';
 }
 
 interface Draws {
-  Point: olDraw | void
-  LineString: olDraw | void
-  Polygon: olDraw | void
-  Circle: olDraw | void
+  Point: olDraw | void;
+  LineString: olDraw | void;
+  Polygon: olDraw | void;
+  Circle: olDraw | void;
 }
 
 export class Snap extends React.Component<{}, SnapState> {
@@ -60,7 +60,7 @@ export class Snap extends React.Component<{}, SnapState> {
     activeInteraction: 'draw'
   }
 
-  constructor(props: {}) {
+  public constructor(props: {}) {
     super(props);
     this.source = new VectorSource();
     this.select = new olSelect()
@@ -158,7 +158,7 @@ export class Snap extends React.Component<{}, SnapState> {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map view={{ center: [0, 0], zoom: 2 }}>
+          `<Map view={{ center: [0, 0], zoom: 2 }}>
   <Layers>
     <layer.Tile />
     <layer.Vector source={this.source} style={vectorStyle} />

@@ -4,7 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import { Drawer, List, ListItem, ListItemText, withStyles, WithStyles } from '@material-ui/core';
 import sharedStyles from '../shared-styles';
 
-import { AppOverlay } from './app-overlay';
+// import { AppOverlay } from './app-overlay';
 
 class Overlays extends React.Component<WithStyles> {
   public render() {
@@ -28,8 +28,8 @@ class Overlays extends React.Component<WithStyles> {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Route path="/overlays" exact component={AppOverlay} />
-          <Route path="/overlays/overlay" component={AppOverlay} />
+          {/* <Route path="/overlays" exact component={AppOverlay} /> */}
+          {/* <Route path="/overlays/overlay" component={AppOverlay} /> */}
         </main>
       </div>
     );

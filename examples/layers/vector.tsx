@@ -31,7 +31,7 @@ export class Vector extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map>
+          `<Map>
   <Layers>
     <layer.Tile/>
     <layer.Vector source={source} style={marker.style} zIndex="1"/>

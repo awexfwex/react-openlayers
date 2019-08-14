@@ -121,7 +121,7 @@ export class DragAndDrop extends React.Component {
           <Highlighter
             lang="json"
             code={
-`{
+              `{
   "type": "Feature",
   "geometry": {
     "type": "Point",
@@ -131,7 +131,7 @@ export class DragAndDrop extends React.Component {
     "name": "Dinagat Islands"
   }
 }`
-          } />
+            } />
         </div>
         <Map view={{ center: [0, 0], zoom: 2 }} mapRef={this.handleMapRef}>
           <Layers>
@@ -155,7 +155,7 @@ export class DragAndDrop extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx"  code={
-`<Map view={{ center: [0, 0], zoom: 2 }} mapRef={map => this.map = map}>
+          `<Map view={{ center: [0, 0], zoom: 2 }} mapRef={map => this.map = map}>
   <Layers>
     <layer.Tile />
   </Layers>

@@ -23,7 +23,7 @@ export class OverviewMap extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map>
+          `<Map>
   <Layers><layer.Tile/></Layers>
   <Controls>
     <control.OverviewMap />

@@ -25,7 +25,7 @@ export class MousePosition extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map>
+          `<Map>
   <Layers><layer.Tile/></Layers>
   <Controls>
     <control.MousePosition projection="EPSG:3857"/>

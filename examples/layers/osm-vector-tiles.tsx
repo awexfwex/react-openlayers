@@ -117,7 +117,7 @@ export class OSMVectorTiles extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map view={{center: olProj.fromLonLat([-74.0064, 40.7142]), maxZoom: 19, zoom: 15 }}>
+          `<Map view={{center: olProj.fromLonLat([-74.0064, 40.7142]), maxZoom: 19, zoom: 15 }}>
   <Layers>
     <layer.VectorTile source={source1} style={style1} />
     <layer.VectorTile source={source2} style={style2} />

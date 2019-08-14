@@ -1,31 +1,57 @@
-/**
- * This config is to build app/app.js to show examples to github users
- */
-var path = require('path');
+const path = require('path');
 const webpack = require('webpack');
 
 const config = {
   mode: process.env.NODE_ENV || "development",
-  entry: './examples/index.tsx',
+  entry: path.resolve(__dirname, './index.tsx'),
   output: {
-    path: `${__dirname}/build/`,
-    publicPath: '/build/',
+    path: path.join(__dirname, 'build'),
     filename: 'app.js'
   },
   devtool: 'source-map',
   devServer: {
-    // host: '0.0.0.0',
     disableHostCheck: true,
+    contentBase: path.resolve(__dirname, '..'),
+    publicPath: '/examples/build/',
   },
   resolve: {
-    extensions: ['.ts', '.webpack.js', '.js', '.tsx', '.json', '.css', '.html'],
+    extensions: ['.ts', '.webpack.js', '.js', '.jsx', '.tsx', '.json', '.css', '.html'],
     alias: {
-      'react-openlayers': path.join(__dirname, '..')
+      'react-dom': '@hot-loader/react-dom',
+      'react-openlayers': path.join(__dirname, '../src')
     }
   },
   module: {
     rules: [
-      {test: /\.ts$/, use: 'ts-loader' },
+      {
+        test: /\.tsx?$/, use: [{
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+
+            presets: [
+                ["@babel/preset-env", {
+                    targets: {
+                        edge: "12",
+                        ie: "11",
+                        chrome: "33",
+                        safari: "10",
+                        samsung: "9"
+                    },
+                    modules: false,
+                    useBuiltIns: false,
+                }],
+                "@babel/preset-react",
+                "@babel/preset-typescript"
+            ],
+            plugins: [
+              'react-hot-loader/babel',
+              "@babel/plugin-proposal-class-properties",
+              "@babel/plugin-proposal-object-rest-spread"
+            ],
+          }
+        }]
+      },
       {
         test: /\.css$/,
         use: [
@@ -34,13 +60,11 @@ const config = {
         ],
       },
       {test: /\.html/, use: 'html-loader'},
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader'
-      }
     ] 
   },
-  plugins: []
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
 
 module.exports = config;

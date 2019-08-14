@@ -37,7 +37,7 @@ class Controls extends React.Component<WithStyles> {
             paper: classes.drawerPaper
           }}
         >
-           <div className={classes.toolbar} />
+          <div className={classes.toolbar} />
           <List>
             <ListItem button component={Link} { ...{ to: "/controls/attribution" }}>
               <ListItemText primary="Attribution" />

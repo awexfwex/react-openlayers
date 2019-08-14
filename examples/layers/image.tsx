@@ -43,7 +43,7 @@ export class Image extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map view={view}>
+          `<Map view={view}>
   <Layers>
     <layer.Image source={imageSource} />
   </Layers>

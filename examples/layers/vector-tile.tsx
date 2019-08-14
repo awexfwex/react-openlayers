@@ -38,7 +38,7 @@ export class VectorTile extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map view={{center: [0,0], zoom:2}}>
+          `<Map view={{center: [0,0], zoom:2}}>
   <Layers>
     <layer.VectorTile source={source} style={createMapboxStreetsV6Style()} />
   </Layers>

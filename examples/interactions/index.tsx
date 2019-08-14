@@ -48,15 +48,15 @@ class Interactions extends React.Component<WithStyles> {
 
     return (
       <div className={classes.categoryRoot}>
-      <Drawer open
-        variant="permanent"
-        anchor="left"
-        classes={{
-          paper: classes.drawerPaper
-        }}
-      >
-        <div className={classes.toolbar} />
-        <List>
+        <Drawer open
+          variant="permanent"
+          anchor="left"
+          classes={{
+            paper: classes.drawerPaper
+          }}
+        >
+          <div className={classes.toolbar} />
+          <List>
             <ListItem button { ...{ to: "/interactions/select" }} component={Link}>
               <ListItemText primary="Select"/>
             </ListItem>

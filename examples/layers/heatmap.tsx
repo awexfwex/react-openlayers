@@ -36,7 +36,7 @@ export class Heatmap extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx"  code={
-`<Map center={[0,0]} view={{center:[0,0], zoom:1}}>
+          `<Map center={[0,0]} view={{center:[0,0], zoom:1}}>
   <Layers>
     <layer.Tile source={tileSource} />
     <layer.Heatmap source={heatmapSource} blur={15} radius={5} />

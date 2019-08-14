@@ -22,7 +22,7 @@ export class Tile extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map>
+          `<Map>
   <Layers>
     <layer.Tile source={new StamenSource({ layer: 'watercolor' })}/>
   </Layers>

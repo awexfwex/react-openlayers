@@ -15,12 +15,12 @@ const rasterTile = new OSMSource();
 const vectorSource = new VectorSource({wrapX: false});
 
 interface DrawState {
-  view: MapProps['view']
-  interactionType: ol.geom.GeometryType
+  view: MapProps['view'];
+  interactionType: ol.geom.GeometryType;
 }
 
 export class Draw extends React.Component<{}, DrawState> {
-  constructor(props: {}) {
+  public constructor(props: {}) {
     super(props);
     this.state = {
       view: {
@@ -66,7 +66,7 @@ export class Draw extends React.Component<{}, DrawState> {
         <Divider />
         <br/>
         <Highlighter lang="jsx"  code={
-`<Map view={this.state.view}>
+          `<Map view={this.state.view}>
   <Layers>
     <layer.Tile source={rasterTile} />
     <layer.Vector source={vectorSource} />

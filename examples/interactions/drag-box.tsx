@@ -13,7 +13,7 @@ import { interaction, Interactions, layer, Layers, Map } from "react-openlayers"
 import Highlighter from "../Highlighter";
 
 interface DragBoxState {
-  selectedFeatures: ol.Collection<ol.Feature> | void
+  selectedFeatures: ol.Collection<ol.Feature> | void;
 }
 
 export class DragBox extends React.Component<{}, DragBoxState> {
@@ -28,7 +28,7 @@ export class DragBox extends React.Component<{}, DragBoxState> {
     format: new GeoJSONFormat()
   })
 
-  constructor(props: {}) {
+  public constructor(props: {}) {
     super(props);
     this.select = new olSelect();
     this.state.selectedFeatures = this.select.getFeatures();
@@ -77,7 +77,7 @@ export class DragBox extends React.Component<{}, DragBoxState> {
               condition={olEventConditions.platformModifierKeyOnly}
               onBoxstart={this.clearSelectedFeatures}
               onBoxend={this.handleBoxEnd}
-              />
+            />
           </Interactions>
         </Map>
         <p><b>Selected countries: </b>{this.state.selectedFeatures && (this.state.selectedFeatures.getArray().length === 0 ? "No selection" : this.state.selectedFeatures.getArray().map((f: olFeature) => f.get('name')).join(', '))}</p>
@@ -85,7 +85,7 @@ export class DragBox extends React.Component<{}, DragBoxState> {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map view={{ center: [0, 0], zoom: 2 }}>
+          `<Map view={{ center: [0, 0], zoom: 2 }}>
   <Layers>
     <layer.Tile />
     <layer.Vector source={this.source} />

@@ -16,7 +16,6 @@ export class AppOverlay extends React.Component {
   public popupComp: Popup;
 
   public showPopup = (evt: ol.MapBrowserEvent) => {
-    console.log("SP", evt)
     this.overlayComp.overlay.setPosition(evt.coordinate);
     const lonlat = olProj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 
@@ -51,7 +50,7 @@ export class AppOverlay extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx" code={
-`<Map onClick={this.showPopup}>
+          `<Map onClick={this.showPopup}>
   <Layers>
     <layer.Tile source={new StamenSource({ layer: 'watercolor' })}/>
   </Layers>

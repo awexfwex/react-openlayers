@@ -23,7 +23,7 @@ export class Attribution extends React.Component {
         <Divider />
         <br />
         <Highlighter lang="jsx" code={
-`<Map>
+          `<Map>
   <Layers><layer.Tile/></Layers>
   <Controls attribution={false} zoom={false}></Controls>
 </Map>`

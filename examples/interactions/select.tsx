@@ -2,9 +2,9 @@ import * as React from "react";
 
 import { Divider, Typography } from "@material-ui/core";
 
-import Feature from 'ol/feature';
-import Point from 'ol/geom/point';
-import VectorSource from 'ol/source/vector';
+import Feature from 'ol/Feature';
+import Point from 'ol/geom/Point';
+import VectorSource from 'ol/source/Vector';
 
 import { custom, interaction, Interactions, layer, Layers, Map, Util } from "react-openlayers";
 
@@ -38,7 +38,7 @@ export class Select extends React.Component {
         <Divider />
         <br/>
         <Highlighter lang="jsx"  code={
-`<Map>
+          `<Map>
   <Layers>
     <layer.Tile />
     <layer.Vector source={markers} style={markers.style} />
